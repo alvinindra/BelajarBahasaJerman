@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+    <!-- APPLICATION STRING -->
+    <string name="app_name">BBJ</string>
+    <string name="action_settings">Settings</string>
+	<string name="bg">Background Image</string>
+	<string name="version">0.1.0</string>
+	<!-- END APPLICATION STRING -->
+	
+	<!-- NAVIGATION STRING -->
+	<string name="tab1">Modul</string>
+	<string name="tab2">Important</string>
+	<string name="tab3">Quiz</string>
+	<!-- END NAVIGATION STRING -->
+	
+	<!-- DESCRIPTION STRING -->
+	<string name="desctext">Text</string>
+	<string name="descimg">Image</string>
+	<string name="btndesc">Button</string>
+	<!-- END DESCRIPTION STRING -->
+</resources>
