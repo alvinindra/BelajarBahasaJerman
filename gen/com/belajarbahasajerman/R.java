@@ -35,23 +35,28 @@ public final class R {
         public static final int quiz=0x7f02000b;
     }
     public static final class id {
-        public static final int RelativeLayout1=0x7f090006;
-        public static final int action_settings=0x7f090009;
+        public static final int RelativeLayout1=0x7f090009;
+        public static final int action_settings=0x7f09000c;
+        public static final int article=0x7f090008;
+        public static final int article_heading0=0x7f090006;
+        public static final int article_subheading0=0x7f090007;
         public static final int btnImportant=0x7f090004;
         public static final int btnModul=0x7f090003;
         public static final int btnQuiz=0x7f090005;
         public static final int btnback1=0x7f090002;
         public static final int listView1=0x7f090001;
         public static final int md_title=0x7f090000;
-        public static final int progressBar1=0x7f090008;
-        public static final int textView1=0x7f090007;
+        public static final int progressBar1=0x7f09000b;
+        public static final int textView1=0x7f09000a;
     }
     public static final class layout {
         public static final int important=0x7f030000;
         public static final int m_pembelajaran=0x7f030001;
         public static final int menu=0x7f030002;
-        public static final int quiz=0x7f030003;
-        public static final int splashscreen=0x7f030004;
+        public static final int modul_0=0x7f030003;
+        public static final int modul_1=0x7f030004;
+        public static final int quiz=0x7f030005;
+        public static final int splashscreen=0x7f030006;
     }
     public static final class menu {
         public static final int main=0x7f080000;
@@ -64,19 +69,28 @@ public final class R {
         /**  APPLICATION STRING 
          */
         public static final int app_name=0x7f060000;
+        /**  END APPLICATION STRING 
+ START FOR MODUL PEMBELAJARAN BAHASA JERMAN 
+ MODUL PEMBELAJARAN 0 
+         */
+        public static final int article_heading0=0x7f060004;
+        public static final int article_subtitle0=0x7f060006;
+        public static final int article_text0=0x7f060007;
+        public static final int article_title0=0x7f060005;
         public static final int bg=0x7f060002;
-        public static final int btndesc=0x7f060009;
-        public static final int descimg=0x7f060008;
+        public static final int btndesc=0x7f06000d;
+        public static final int descimg=0x7f06000c;
         /**  END NAVIGATION STRING 
  DESCRIPTION STRING 
          */
-        public static final int desctext=0x7f060007;
-        /**  END APPLICATION STRING 
+        public static final int desctext=0x7f06000b;
+        /**  END OF MODUL 0 
+ END OF MODUL PEMBELAJARAN BAHASA JERMAN 
  NAVIGATION STRING 
          */
-        public static final int tab1=0x7f060004;
-        public static final int tab2=0x7f060005;
-        public static final int tab3=0x7f060006;
+        public static final int tab1=0x7f060008;
+        public static final int tab2=0x7f060009;
+        public static final int tab3=0x7f06000a;
         public static final int version=0x7f060003;
     }
     public static final class style {

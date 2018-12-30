@@ -8,6 +8,15 @@
 	<string name="version">0.1.0</string>
 	<!-- END APPLICATION STRING -->
 	
+	<!-- START FOR MODUL PEMBELAJARAN BAHASA JERMAN -->
+		<!-- MODUL PEMBELAJARAN 0 -->
+		<string name="article_heading0"></string>
+		<string name="article_title0"></string>
+		<string name="article_subtitle0"></string>
+		<string name="article_text0"></string>
+		<!-- END OF MODUL 0 -->
+	<!-- END OF MODUL PEMBELAJARAN BAHASA JERMAN -->
+		
 	<!-- NAVIGATION STRING -->
 	<string name="tab1">Modul</string>
 	<string name="tab2">Important</string>
