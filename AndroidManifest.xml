@@ -34,6 +34,10 @@
             android:noHistory="true" >
         </activity>
         <activity
+            android:name=".modul_activity_0"
+            android:noHistory="true" >
+        </activity>
+        <activity
             android:name=".SplashActivity"
             android:noHistory="true">
             <intent-filter>

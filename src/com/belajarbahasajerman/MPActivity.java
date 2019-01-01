@@ -38,6 +38,10 @@ public class MPActivity extends Activity {
         adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1, listItems);
         listView1.setAdapter(adapter);
+        listItems.add("Modul 1 : \nMengenal bahasa Jerman");
+        listItems.add("Modul 2 : \nSalam dan ungkapan dasar");
+        listItems.add("Modul 3 : \nNomor dalam bahasa Jerman");
+        listItems.add("Modul 4 : \nTentang waktu");
         
         listView1.setOnItemClickListener(new OnItemClickListener() {
             @Override
@@ -45,13 +49,17 @@ public class MPActivity extends Activity {
                 int position, long id) {
             	if(position==0)
                 {
-            		Intent im = new Intent(MPActivity.this, ImportantActivity.class);
-                    startActivity(im);
+            		Intent im = new Intent(MPActivity.this, modul_activity_0.class);
+            		mp.start();
+            		startActivity(im);
                     finish();
                 }
                 else if(position==1)
                 {
-                    startActivity(new Intent(Intent.ACTION_VIEW,Uri.parse("")));
+                	Intent im1 = new Intent(MPActivity.this, modul_activity_0.class);
+                	mp.start();
+                	startActivity(im1);
+                    finish();
                 }
             }
         });

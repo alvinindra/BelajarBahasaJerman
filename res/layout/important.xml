@@ -1,8 +1,80 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
-    
+    android:orientation="vertical"
+    android:background="@drawable/bg_menu"
+    android:padding="10dip" >
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/i_title"
+        android:layout_width="320dp"
+        android:layout_height="63dp"
+        android:layout_gravity="center"
+        android:background="@drawable/important_title"
+        android:contentDescription="@string/descimg" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="309dp"
+        android:layout_below="@+id/i_title"
+        android:background="#FFFFFF" >
+		
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="309dp"
+            android:layout_margin="6dp"
+            android:background="#FFFFFF">
+
+            <TextView
+                android:id="@+id/article"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="5sp"
+                android:text="@string/article_text0" />
+
+			<ImageView
+			    android:id="@+id/bunyik1"
+			    android:layout_width="309.500dp"
+			    android:layout_height="150dp"
+			    android:layout_below="@+id/article"
+			    android:layout_centerHorizontal="true"
+			    android:background="@drawable/bunyi_konsonan"
+			    android:contentDescription="@string/descimg" />
+			<ImageView
+			    android:id="@+id/bunyik2"
+			    android:layout_width="303.500dp"
+			    android:layout_height="85dp"
+			    android:layout_below="@+id/bunyik1"
+			    android:layout_centerHorizontal="true"
+			    android:background="@drawable/bk_akhir"
+			    android:contentDescription="@string/descimg" />
+			<ImageView
+			    android:id="@+id/bunyiv"
+			    android:layout_width="302dp"
+			    android:layout_height="116dp"
+			    android:layout_below="@+id/bunyik2"
+			    android:layout_centerHorizontal="true"
+			    android:background="@drawable/bunyi_vokal"
+			    android:contentDescription="@string/descimg" />
+			<TextView
+                android:id="@+id/article2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bunyiv"
+                android:lineSpacingExtra="5sp"
+                android:text="@string/article_text01" />
+			
+        </RelativeLayout>
+    </ScrollView>
+
+   	<Button
+        android:id="@+id/btnback3"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_alignLeft="@+id/scrollView1"
+        android:layout_marginTop="3dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/back" />
+
+</RelativeLayout>
