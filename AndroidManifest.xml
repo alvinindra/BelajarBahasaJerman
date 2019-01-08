@@ -38,6 +38,14 @@
             android:noHistory="true" >
         </activity>
         <activity
+            android:name=".modul_activity_1"
+            android:noHistory="true" >
+        </activity>
+        <activity
+            android:name=".QuizGameActivity"
+            android:noHistory="true" >
+        </activity>
+        <activity
             android:name=".SplashActivity"
             android:noHistory="true">
             <intent-filter>
