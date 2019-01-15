@@ -1,14 +1,16 @@
 package com.belajarbahasajerman;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
-import android.app.Activity;
-import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
-import android.view.Window;
 import android.view.View.OnClickListener;
+import android.view.Window;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 
 public class ImportantActivity extends Activity {
@@ -33,6 +35,21 @@ public class ImportantActivity extends Activity {
                 finish();
 			}
         });
+        
+        WebView webView = (WebView) findViewById(R.id.webview);
+        webView.getSettings().setLoadsImagesAutomatically(true);
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.getSettings().setDomStorageEnabled(true);
+
+        // Tiga baris di bawah ini agar laman yang dimuat dapat
+        // melakukan zoom.
+        webView.getSettings().setSupportZoom(true);
+        webView.getSettings().setBuiltInZoomControls(true);
+        webView.getSettings().setDisplayZoomControls(false);
+        // Baris di bawah untuk menambahkan scrollbar di dalam WebView-nya
+        webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+        webView.setWebViewClient(new WebViewClient());
+        webView.loadUrl(Uri.parse("file:///android_asset/important.html").toString());
     }
 
     @Override

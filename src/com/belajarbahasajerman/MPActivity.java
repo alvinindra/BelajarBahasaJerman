@@ -56,7 +56,7 @@ public class MPActivity extends Activity {
                 }
                 else if(position==1)
                 {
-                	Intent im1 = new Intent(MPActivity.this, modul_activity_0.class);
+                	Intent im1 = new Intent(MPActivity.this, modul_activity_1.class);
                 	mp.start();
                 	startActivity(im1);
                     finish();

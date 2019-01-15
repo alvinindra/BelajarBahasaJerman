@@ -1,56 +1,107 @@
 package com.belajarbahasajerman;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class QuizGameActivity extends Activity {
+public class QuizGameActivity extends Activity implements OnClickListener {
 	Button btnback;
 	private MediaPlayer mp;
 	private Uri uri;
 	TextView tvSoal;
-    Button jaw1, jaw2, jaw3, jaw4;
-    String[] soal = 
-    	{"Bahasa Jerman 'Nama saya' adalah",
-         "Ada berapa huruf di bahasa Jerman ?",
-         "Angka tiga dalam bahasa Jerman yaitu",
-         "Ich bin ... Jahre alt adalah menyatakan tentang",
-         "Di bahasa Jerman mengucapkan selamat malam adalah",
-         "Ketika berpisah dengan seseorang, kamu harus mengatakan(Formal) ?",
-         "elf + vier adalah ",
-         "Terima kasih dalam bahasa Jerman",
-         "Sechs, sieben, acht, ... lanjutannya adalah",
-         "Guten tag adalah ucapan pada saat ..."};
-    int noSoal = 1;
-    int[] jaw = new int[10];
+    Button OptionA, OptionB, OptionC;
+    int skor=0;
+    int arr;
+	int x; 
+	Boolean clicked1=false,clicked2=false,clicked3=false;
+	String jawaban;
+	
+	Soalpilihan soalPG = new Soalpilihan();
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.quizgame);
+        
         btnback=(Button)findViewById(R.id.btnback3);
         uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.btn_klik);
         mp = MediaPlayer.create(this, uri);
         tvSoal = (TextView)findViewById(R.id.Soal);
-        jaw1 = (Button)findViewById(R.id.OptionA);
-        jaw2 = (Button)findViewById(R.id.OptionB);
-        jaw3 = (Button)findViewById(R.id.OptionC);
-        jaw4 = (Button)findViewById(R.id.OptionD);
+        OptionA = (Button)findViewById(R.id.OptionA);
+        OptionB = (Button)findViewById(R.id.OptionB);
+        OptionC = (Button)findViewById(R.id.OptionC);
         
-        tvSoal.setText(soal[noSoal-1]);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
+        setKonten();
+        OptionA.setOnClickListener(this);
+        OptionB.setOnClickListener(this);
+        OptionC.setOnClickListener(this);
+        
     }
     
+    @Override
+    public void onClick(View v){
+    	switch (v.getId()) {
+    		case R.id.OptionA:
+    			mp.start();
+    			if(OptionA.getText().toString().equals(jawaban)){
+    				skor = skor + 10;
+    				Toast.makeText(this, "Jawaban Benar", Toast.LENGTH_SHORT).show();
+    				setKonten();
+    			}else{
+    				Toast.makeText(this, "Jawaban Salah", Toast.LENGTH_SHORT).show();
+    				setKonten();
+    			}
+				break;
+    		case R.id.OptionB:
+    			mp.start();
+    			if(OptionB.getText().toString().equals(jawaban)){
+    				skor = skor + 10;
+    				Toast.makeText(this, "Jawaban Benar", Toast.LENGTH_SHORT).show();
+    				setKonten();
+    			}else{
+    				Toast.makeText(this, "Jawaban Salah", Toast.LENGTH_SHORT).show();
+    				setKonten();
+    			}
+				break;
+    		case R.id.OptionC:
+    			mp.start();
+    			if(OptionC.getText().toString().equals(jawaban)){
+    				skor = skor + 10;
+    				Toast.makeText(this, "Jawaban Benar", Toast.LENGTH_SHORT).show();
+    				setKonten();
+    			}else{
+    				Toast.makeText(this, "Jawaban Salah", Toast.LENGTH_SHORT).show();
+    				setKonten();
+    			}
+				break;
+    	}
+    }
+    
+    public void setKonten(){
+		arr = soalPG.pertanyaan.length;
+		if(x >= arr){
+			Intent i = new Intent(QuizGameActivity.this, HasilSkoring.class);
+			i.putExtra("skorAkhir",skor);
+			i.putExtra("activity","PilihanGanda");
+			startActivity(i);
+		}else{
+			tvSoal.setText(soalPG.getPertanyaan(x));
+			OptionA.setText(soalPG.getPilihanJawaban1(x));
+			OptionB.setText(soalPG.getPilihanJawaban2(x));
+			OptionC.setText(soalPG.getPilihanJawaban3(x));
+			jawaban = soalPG.getJawabanBenar(x);
+
+		}
+		x++;
+	}
+
 }
