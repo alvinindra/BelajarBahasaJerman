@@ -45,35 +45,19 @@
         android:background="#FFFFFF" >
 		
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="309dp"
-            android:layout_margin="6dp"
-            android:background="#FFFFFF">
-
-            <TextView
-                android:id="@+id/article"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:lineSpacingExtra="5sp"
-                android:text="@string/article_text20" />
-            <TextView
-			    android:id="@+id/article2"
-			    android:layout_width="wrap_content"
-			    android:layout_height="wrap_content"
-			    android:layout_below="@+id/article"
-                android:lineSpacingExtra="4sp"
-			    android:text="@string/article_text21"
-			    android:textStyle="bold"/>
-			<TextView
-                android:id="@+id/article3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/article2"
-                android:textSize="14sp"
-                android:lineSpacingExtra="-4sp"
-                android:text="@string/article_text22" />
-			
-        </RelativeLayout>
+			    android:id="@+id/bunyiId"
+	            android:layout_width="match_parent"
+	            android:layout_height="fill_parent"
+	            android:layout_below="@+id/article"
+	            android:layout_margin="6dp"
+	            android:background="#FFFFFF" >
+	
+	            <WebView  xmlns:android="http://schemas.android.com/apk/res/android"
+				    android:id="@+id/webview"
+				    android:layout_width="match_parent"
+				    android:layout_height="fill_parent"
+				/>
+	    </RelativeLayout>
     </ScrollView>
 
     <Button

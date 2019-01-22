@@ -4,30 +4,35 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg_menu"
     android:orientation="vertical" >
-	
-    <Button
-        android:id="@+id/btnModul"
-        android:layout_marginTop="120dp"
-        android:layout_width="220dp"
-        android:layout_height="70dp"
-        android:layout_gravity="center"
-        android:contentDescription="@string/btndesc"
-        android:background="@drawable/btn_modul" />
-    <Button
-        android:id="@+id/btnImportant"
-        android:layout_marginTop="25dp"
-        android:layout_width="220dp"
-        android:layout_height="70dp"
-        android:layout_gravity="center"
-        android:contentDescription="@string/btndesc"
-        android:background="@drawable/btn_important" />
-    <Button
-        android:id="@+id/btnQuiz"
-        android:layout_marginTop="25dp"
-        android:layout_width="220dp"
-        android:layout_height="70dp"
-        android:layout_gravity="center"
-        android:contentDescription="@string/btndesc"
-        android:background="@drawable/btn_quiz" />
-    
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btnModul"
+            android:layout_width="220dp"
+            android:layout_height="70dp"
+            android:background="@drawable/btn_modul"
+            android:contentDescription="@string/btndesc" />
+        <Button
+            android:id="@+id/btnImportant"
+            android:layout_width="220dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/btnModul"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/btn_important"
+            android:contentDescription="@string/btndesc" />
+        <Button
+            android:id="@+id/btnQuiz"
+            android:layout_width="220dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/btnImportant"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/btn_quiz"
+            android:contentDescription="@string/btndesc" />
+    </RelativeLayout>
+
 </LinearLayout>
