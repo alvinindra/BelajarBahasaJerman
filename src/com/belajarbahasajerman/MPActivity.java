@@ -41,7 +41,6 @@ public class MPActivity extends Activity {
         listItems.add("Modul 1 : \nMengenal bahasa Jerman");
         listItems.add("Modul 2 : \nSalam dan ungkapan dasar");
         listItems.add("Modul 3 : \nNomor dalam bahasa Jerman");
-        listItems.add("Modul 4 : \nTentang waktu");
         
         listView1.setOnItemClickListener(new OnItemClickListener() {
             @Override
@@ -57,6 +56,13 @@ public class MPActivity extends Activity {
                 else if(position==1)
                 {
                 	Intent im1 = new Intent(MPActivity.this, modul_activity_1.class);
+                	mp.start();
+                	startActivity(im1);
+                    finish();
+                }
+                else if(position==2)
+                {
+                	Intent im1 = new Intent(MPActivity.this, modul_activity_2.class);
                 	mp.start();
                 	startActivity(im1);
                     finish();

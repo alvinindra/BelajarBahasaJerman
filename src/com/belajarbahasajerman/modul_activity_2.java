@@ -13,7 +13,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 
-public class modul_activity_0 extends Activity {
+public class modul_activity_2 extends Activity {
 	Button btnback;
 	private MediaPlayer mp;
 	private Uri uri;
@@ -21,7 +21,7 @@ public class modul_activity_0 extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.modul_0);
+        setContentView(R.layout.modul_2);
         uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.btn_klik);
         mp = MediaPlayer.create(this, uri);
         btnback=(Button)findViewById(R.id.btnback2);
@@ -29,7 +29,7 @@ public class modul_activity_0 extends Activity {
         btnback.setOnClickListener(new OnClickListener(){
 			@Override
 			public void onClick(View arg0) {
-				Intent ib = new Intent(modul_activity_0.this, MPActivity.class);
+				Intent ib = new Intent(modul_activity_2.this, MPActivity.class);
 				mp.start();
                 startActivity(ib);
                 finish();
@@ -49,7 +49,7 @@ public class modul_activity_0 extends Activity {
         // Baris di bawah untuk menambahkan scrollbar di dalam WebView-nya
         webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl(Uri.parse("file:///android_asset/tabel.html").toString());
+        webView.loadUrl(Uri.parse("file:///android_asset/modul3.html").toString());
     }
 
 
