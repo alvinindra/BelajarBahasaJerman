@@ -38,6 +38,10 @@
             android:noHistory="true" >
         </activity>
         <activity
+            android:name=".modul_activity_2"
+            android:noHistory="true" >
+        </activity>
+        <activity
             android:name=".QuizGameActivity"
             android:noHistory="true" >
         </activity>
