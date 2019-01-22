@@ -9,19 +9,51 @@
 	<!-- END APPLICATION STRING -->
 	
 	<!-- START FOR MODUL PEMBELAJARAN BAHASA JERMAN -->
-		<!-- MODUL PEMBELAJARAN 0 -->
-		<string name="article_title0">Modul 1 : \nAyo mengenal bahasa Jerman !</string>
+		<!-- MODUL PEMBELAJARAN 1 -->
+		<string name="article_title0">Modul 1 : \nAyo Mengenal Bahasa Jerman !</string>
 		<string name="article_subtitle0">- Mengenal bunyi</string>
 		<string name="article_text0">
 		    \tPertama yang akan dipelajari adalah belajar bunyi dalam bahasa Jerman. Bunyi konsonan dan vokal dalam bahasa Jerman sebagian besar adalah sama jika dibandingkan dengan bahasa Indonesia, hanya ada perbedaan dan tambahan bunyi pada huruf berikut (bunyi khusus):
 		    </string>
 		<string name="article_text01">
 		    \tDan jangan lupa bahwa dalam bahasa Jerman terdapat 30 huruf dimana ada tambahan huruf yaitu  (Ä Ö Ü ß). Mungkin itu saja dari modul 1  pembelajaran bahasa jerman tentang mengenal.
+		    \n
+		    \n
 		</string>
-		<!-- END OF MODUL 0 -->
+		<!-- END OF MODUL 1 -->
+		
+		<!-- MODUL PEMBELAJARAN 2 -->
+		<string name="article_title2">Modul 2 : \nSalam Dan Ungkapan Dasar</string>
+		<string name="article_subtitle2">- Menyapa</string>
+		<string name="article_text20">
+		    
+		  	</string>
+		<string name="article_text21">
+		    
+		</string>
+		<string name="article_text22">
+			
+		</string>
+		<!-- END OF MODUL 2 -->
+		
+		<!-- MODUL PEMBELAJARAN 3 -->
+		<string name="article_title3">Modul 3 : \nAngka Dalam Bahasa Jerman</string>
+		<string name="article_subtitle3">- Angka</string>
+		<string name="article_text30">
+		    
+		  	</string>
+		<string name="article_text31">
+		    
+		</string>
+		<string name="article_text32">
+			
+		</string>
+		<!-- END OF MODUL 3 -->
 	<!-- END OF MODUL PEMBELAJARAN BAHASA JERMAN -->
 		
 	<!-- DESCRIPTION STRING -->
+	<string name="home">Home</string>
+	
 	<string name="desctext">Text</string>
 	<string name="descimg">Image</string>
 	<string name="btndesc">Button</string>
